@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/preparationFragment">
+
+    <fragment
+        android:id="@+id/preparationFragment"
+        android:name="fr.eni.racontesmoiunehistoire.fragments.PreparationFragment"
+        android:label="fragment_preparation"
+        tools:layout="@layout/fragment_preparation" >
+        <argument
+            android:name="monHistoire"
+            app:argType="fr.eni.racontesmoiunehistoire.model.Histoire" />
+        <action
+            android:id="@+id/action_preparationFragment_to_histoireFragment"
+            app:destination="@id/histoireFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/histoireFragment"
+        android:name="fr.eni.racontesmoiunehistoire.fragments.HistoireFragment"
+        android:label="fragment_histoire"
+        tools:layout="@layout/fragment_histoire" >
+        <argument
+            android:name="monHistoire"
+            app:argType="fr.eni.racontesmoiunehistoire.model.Histoire" />
+    </fragment>
+</navigation>
